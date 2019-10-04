@@ -11,7 +11,15 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
+    
+.macified {
+  background-image: url("macpaint_regular_tile.png");
+  background-position: top;
+  background-repeat: repeat;
+  border: 1px;
+  border-radius: 25px;
+}
+    
 header, footer {
   color: black;
   width: 100%;
@@ -30,9 +38,6 @@ footer {
 
 section {
   padding: 10px;
-  background-image: url("macpaint_regular_tile.png");
-  background-position: top;
-  background-repeat: repeat;
 }
 
 figure {
@@ -52,14 +57,14 @@ nav ul li {
   </style>
   <body>
     
-    <header>
+    <header class="macified">
       <p><h1>We are Sun Citadel Dance Club!</h1></p>
       <section>
         <p>An underground club concept sprung out of Stockholm Sweden in 2019.</p>
       </section>
     </header>
 
-    <article>
+    <article class="macified">
       <section>
         <nav>
           <ul>
@@ -70,11 +75,11 @@ nav ul li {
           </ul>
         </nav>
       </section>
-      <figure>
-        <img src="logo.png" alt="Logo pic" />
-      </figure>
     </article>
-    <footer>
+    <figure>
+      <img src="logo.png" alt="Logo pic" />
+    </figure>
+    <footer class="macified">
       <p>Sun Citadel Dance Club, Stockholm, Email: suncitadeldanceclub [at] gmail.com</p>
     </footer>
   </body>
