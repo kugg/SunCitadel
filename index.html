@@ -21,21 +21,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', end
 
 }
 
-@media screen and (orientation: portrait) {
-  html {
-        /* Rotate the content container */
-        transform: rotate(-90deg);
-        transform-origin: left top;
+html {
         /* Set content width to viewport height */
-        width: 100vh;
+        width: 100vw;
         /* Set content height to viewport width */
-        height: 100vw;
+        height: 100vh;
         overflow: hidden;
         position: absolute;
         top: 100%;
         left: 0;
-   }
-}
+ }
 
 
 
@@ -71,8 +66,9 @@ section {
 
 figure {
   position: absolute;
-  top: 50%;
+  top: 1.5rem;
   right: 0;
+  z-index: -1;
 }
 
 nav ul {
