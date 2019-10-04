@@ -9,13 +9,10 @@ body {
 /*
   background-image: url("background1.jpg");
 */
- /* background-image: linear-gradient(to bottom right, red, yellow);
- 
-  background-color: 
-  position: absolute;*/
+ /* background-image: linear-gradient(to bottom right, red, yellow;*/
 background-position: center;
 background-repeat: no-repeat;
-background-size: 100% 100%
+background-size: cover;
 background: rgb(242,246,248); /* Old browsers */
 background: -moz-linear-gradient(-45deg, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 50%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%); /* FF3.6-15 */
 background: -webkit-linear-gradient(-45deg, rgba(242,246,248,1) 0%,rgba(216,225,231,1) 50%,rgba(181,198,208,1) 51%,rgba(224,239,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
@@ -23,11 +20,29 @@ background: linear-gradient(135deg, rgba(242,246,248,1) 0%,rgba(216,225,231,1) 5
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 }
-    
+
+@media screen and (orientation: landscape) {
+  html {
+        /* Rotate the content container */
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        /* Set content width to viewport height */
+        width: 100vh;
+        /* Set content height to viewport width */
+        height: 100vw;
+        overflow-x: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
+   }
+}
+
+
+
 .macified {
-  /* background-image: url("macpaint_regular_tile_low.png");
+  background-image: url("macpaint_regular_tile_low.png");
   background-position: top;
-  background-repeat: repeat;*/
+  background-repeat: repeat;
   border: 1px solid black;
   border-radius: 10px;
   margin: 1em;
@@ -36,7 +51,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', end
     
 a {
   color: black;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 header {
