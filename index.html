@@ -14,7 +14,7 @@ body {
 background-repeat: no-repeat;
 background-size: cover;
 
-  background-image: linear-gradient(red, yellow), url("macpaint_regular_tile_low.png");
+  background: linear-gradient(red, yellow), url("macpaint_regular_tile_low.png");
   background-position: top;
   background-repeat: repeat;
   
@@ -74,7 +74,8 @@ figure {
   position: absolute;
   top: 1.5rem;
   right: 0;
-  z-index: -1;
+  z-index: 1;
+  transform: rotate(20deg);
 }
 
 nav ul {
