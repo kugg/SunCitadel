@@ -17,9 +17,9 @@
     ],
     "startupOptions" : {
         "channel": "#suncitadel",
-        "nick": "dance?"
-	"server": "irc.freenode.org"
-	"port": 6697
+        "nick": "dance?",
+	"server": "irc.freenode.org",
+	"port": 6697,
 	"tls": true
     },
     "embedly": {
