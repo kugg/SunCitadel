@@ -6,11 +6,70 @@
 body {
   font-family: 'EB Garamond';
   font-size: 2em;
-  background-image: url("background2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+/*  background-image: url("background2.jpg"); */
+/*  background-repeat: no-repeat; */
+/*  background-size: cover; */
+}
+    
+
+/*
+essential styles:
+these make the slideshow work
+*/
+
+#slides {
+    position: relative;
+    height: 300px;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
 }
 
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.showing {
+    opacity: 1;
+    z-index: 2;
+}
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slide {
+    font-size: 40px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    color: #fff;
+}
+
+.slide:nth-of-type(1) {
+    background: url('cloud.gif');
+}
+.slide:nth-of-type(2) {
+    background: url('laser.gif');
+}
+.slide:nth-of-type(3) {
+    background: url('sunset.gif');
+}
+.slide:nth-of-type(4) {
+    background: url('djungel.gif');
+}
+      
 html {
   /* Set content width to viewport height */
   width: 100vw;
@@ -91,40 +150,42 @@ nav ul li {
 }
   </style>
   <body>
-    
+    <script type="text/javascript">
+    var slides = document.querySelectorAll('#slides .slide');
+    var currentSlide = 0;
+    var slideInterval = setInterval(nextSlide,3000);
+
+    function nextSlide() {
+      slides[currentSlide].className = 'slide';
+      currentSlide = (currentSlide+1)%slides.length;
+      slides[currentSlide].className = 'slide showing';
+    }
+    </script>
     <header class="macified">
       <section>
         <p><h2>We are Sun Citadel Dance Club!</h2></p>
         <p>An underground club sprung out of Stockholm Sweden.</p>
       </section>
     </header>
-
-    <article class="macified">
-      <section>
-        <nav>
-          <ul>
-            <li><a href="https://soundcloud.com/sun-citadel">Find us on Soundcloud</a></li>
-            <li><a href="https://www.instagram.com/suncitadeldanceclub/">Find us on Instagram</a></li>
-            <li><a href="https://www.facebook.com/suncitadeldanceclub/">Find us on Facebook</a></li>
-            <li><a href="https://www.residentadvisor.net/profile/suncitadel">Find us on Resident Advisor</a></li>
-            <li><a href="https://forms.gle/48LhTwjcqgvEk2FE6">Register for events!</a></li>
-          </ul>
-        </nav>
-      </section>
-    </article>
-    <article>
-      <section>
-        <p>Audio</p>
-        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1035799948&color=%232b1411&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-      </section>
-    </article>
-    <article class="macified">
-      <section>
-        <nav>
-          <iframe src="https://drive.google.com/file/d/1Is95k4Wm6snRjt6nppi2gDhUU-4w02GX/preview" width="640" height="480"></iframe>
-        </nav>
-      </section>
-    </article>
+    <ul id="slides">
+      <li class="slide showing"><p>Audio</p><iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1035799948&color=%232b1411&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></li>
+      <li class="slide"><p>Visual</p><iframe src="https://drive.google.com/file/d/1Is95k4Wm6snRjt6nppi2gDhUU-4w02GX/preview" width="640" height="480"></iframe></li>
+      <li class="slide"><p>Register</p><iframe width="100%" height="300" src="https://forms.gle/48LhTwjcqgvEk2FE6"></iframe></li>
+      <li class="slide"><p>Social</p>
+        <article class="macified">
+          <section>
+           <nav>
+              <ul>
+                <li><a href="https://soundcloud.com/sun-citadel">Soundcloud</a></li>
+                <li><a href="https://www.instagram.com/suncitadeldanceclub/">Instagram</a></li>
+                <li><a href="https://www.facebook.com/suncitadeldanceclub/">Facebook</a></li>
+                <li><a href="https://www.residentadvisor.net/profile/suncitadel">Resident Advisor</a></li>
+              </ul>
+            </nav>
+          </section>
+        </article>
+      </li> 
+    </ul>
     <figure>
       <img class="logo" src="logo.png" alt="Logo pic" />
     </figure>
