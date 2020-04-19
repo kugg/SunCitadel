@@ -157,12 +157,13 @@ nav ul li {
   margin: 5px;
 }
   </style>
-  <body>
+  <body onload="startSlide();">
     <script type="text/javascript">
-    var slides = document.querySelectorAll('#slides .slide');
-    var currentSlide = 0;
-    var slideInterval = setInterval(nextSlide,3000);
-
+    function startSlide() {
+      var slides = document.querySelectorAll('#slides .slide');
+      var currentSlide = 0;
+      var slideInterval = setInterval(nextSlide,3000);
+    }
     function nextSlide() {
       slides[currentSlide].className = 'slide';
       currentSlide = (currentSlide+1)%slides.length;
