@@ -238,14 +238,16 @@ nav ul li {
   <body onload="startSlide();">
     <script type="text/javascript">
     var currentSlide = 0;
-    window.onscroll = function() {stickyNavbar()};
-
+    function navbarLoader() {
+    // Get the navbar
+    var navbar = document.getElementById("navbar");
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+      
+    window.onscroll = function() {stickyNavbar(navbar, sticky)};
+    }
     // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
     function stickyNavbar() {
-      // Get the navbar
-      var navbar = document.getElementById("navbar");
-      // Get the offset position of the navbar
-      var sticky = navbar.offsetTop;
 
       if (window.pageYOffset >= sticky) {
         navbar.classList.add("sticky")
@@ -273,7 +275,7 @@ nav ul li {
         <p>An underground club sprung out of Stockholm Sweden.</p>
       </section>
       <section>
-        <ul class="navigation" id="navbar">
+        <ul class="navigation" id="navbar" onload="navbarLoader();">
           <li><a href="#audio">Listen</a></li>
           <li><a href="#visual">See</a></li>
           <li><a href="https://forms.gle/48LhTwjcqgvEk2FE6" target="_blank">Register</a></li>
