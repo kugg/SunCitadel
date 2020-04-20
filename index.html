@@ -162,14 +162,11 @@ nav ul li {
     function startSlide() {
       var slides = document.querySelectorAll('#slides .slide');
       var currentSlide = 0;
-      
-      while (true) {
-        var slideInterval = setInterval(nextSlide, 3000, slides, currentSlide);
-        currentSlide = (currentSlide + 1) % slides.length;
-      }
-      
+      var slideInterval = setInterval(nextSlide, 3000, slides, currentSlide);
+
       function nextSlide(slides, currentSlide) {
         slides[currentSlide].className = 'slide';
+        currentSlide = (currentSlide + 1) % slides.length;
         slides[currentSlide].className = 'slide showing';
       }
     }
