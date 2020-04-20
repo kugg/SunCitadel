@@ -158,9 +158,29 @@ nav ul li {
   display: block;
   margin: 5px;
 }
+
+.social {
+  position: absolute;
+  z-index: -1;
+  right: 200px;
+  top: 250px;
+  list-style-type: none;
+  text-decoration: none;
+}
+    
+.social ul {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.social li {
+  display: inline-block;
+}
+
   </style>
   <body onload="startSlide();">
     <script type="text/javascript">
+    window.scrollTo(0, 0);
     var currentSlide = 0;
     function startSlide() {
       var slides = document.querySelectorAll('#slides .slide');
@@ -190,17 +210,17 @@ nav ul li {
     </ul>
     <ul>
       <li class="macified" id="audio"><p>Audio</p><iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1035799948&color=%232b1411&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></li>
-      <li class="macified" id="visual"><a name="visual"><p>Visual</p><iframe src="https://drive.google.com/file/d/1b4te13DLQeTaiVBbH7TqYskHNUdN2SIe/preview" width="740" height="486"></iframe></li>
-      <li class="macified" id="register"><a name="register"><p>Register</p><iframe width="100%" height="300" src="https://forms.gle/48LhTwjcqgvEk2FE6"></iframe></li>
-      <li class="macified"><p>Social</p>
+      <li class="macified" id="visual"><p>Visual</p><iframe src="https://drive.google.com/file/d/1b4te13DLQeTaiVBbH7TqYskHNUdN2SIe/preview" width="740" height="486"></iframe></li>
+      <li class="macified" id="register"><p>Register</p><iframe width="100%" height="300" src="https://forms.gle/48LhTwjcqgvEk2FE6"></iframe></li>
+      <li class="social"><p>Social</p>
         <article>
           <section>
            <nav>
               <ul>
-                <li><a href="https://soundcloud.com/sun-citadel">Soundcloud</a></li>
-                <li><a href="https://www.instagram.com/suncitadeldanceclub/">Instagram</a></li>
-                <li><a href="https://www.facebook.com/suncitadeldanceclub/">Facebook</a></li>
-                <li><a href="https://www.residentadvisor.net/profile/suncitadel">Resident Advisor</a></li>
+                <li><a href="https://soundcloud.com/sun-citadel"><img src="soundcloud.png"/></a></li>
+                <li><a href="https://www.instagram.com/suncitadeldanceclub/"><img src="instagram.png"/></a></li>
+                <li><a href="https://www.facebook.com/suncitadeldanceclub/"><img src="facebook.png"/></a></li>
+                <li><a href="https://www.residentadvisor.net/profile/suncitadel"><img src="residentadvisor.png"/></a></li>
               </ul>
             </nav>
           </section>
@@ -210,10 +230,5 @@ nav ul li {
     <figure>
       <img class="logo" src="logo.png" alt="Logo pic" />
     </figure>
-    <footer>
-      <section>
-         <p>Sun Citadel Dance Club, Stockholm, Email: suncitadeldanceclub [at] gmail.com</p>
-      </section>
-    </footer>
   </body>
 </html>
