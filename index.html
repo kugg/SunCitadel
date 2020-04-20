@@ -112,6 +112,7 @@ html {
   border: none;
   border-radius: 10px;
   margin: 1em;
+  list-style-type: none;
 }
 
 a {
@@ -156,7 +157,7 @@ nav ul li {
   margin: 5px;
 }
   </style>
-  <body onload="startSlide();">
+  <body>
     <script type="text/javascript">
     var currentSlide = 0;
     function startSlide() {
@@ -176,11 +177,11 @@ nav ul li {
         <p>An underground club sprung out of Stockholm Sweden.</p>
       </section>
     </header>
-    <ul id="slides">
-      <li class="slide showing"></li>
-      <li class="slide"></li>
-      <li class="slide"></li>
-      <li class="slide"></li>
+    <ul id="slides" onload="startSlide();">
+      <li class="slide showing">1</li>
+      <li class="slide">2</li>
+      <li class="slide">3</li>
+      <li class="slide">4</li>
     </ul>
     <ul>
       <li class="macified"><p>Audio</p><iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1035799948&color=%232b1411&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></li>
