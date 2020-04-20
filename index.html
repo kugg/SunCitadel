@@ -100,20 +100,22 @@ html {
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-.macified {
+.content {
 /*
  background: linear-gradient(135deg, rgba(250,250,250,1) -30%,rgba(255,255,255,0) 100%);
  */
   border: none;
   list-style-type: none;
   z-index: 10;
-  position: relative;
-  display: none;
+  position: absolute;
+  left: 20px;
+  top: 300px;
+  /*display: none;*/
   visibility: hidden;
 }
 
 :target {
-  display: block;
+  /*display: block;*/
   visibility: visible;
 }
 
@@ -257,9 +259,9 @@ nav ul li {
       <li class="slide"></li>
     </ul>
     <ul>
-      <li class="macified" id="audio"><iframe width="80%" height="400" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1035799948&color=%232b1411&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></li>
-      <li class="macified" id="visual"><iframe src="https://drive.google.com/file/d/1b4te13DLQeTaiVBbH7TqYskHNUdN2SIe/preview" width="740" height="486"></iframe></li>
-      <li class="macified" id="register"><p>This page should allow visitors to sign up to a news-letter</p></li>
+      <li class="content" id="audio"><iframe width="80%" height="400" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1035799948&color=%232b1411&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></li>
+      <li class="content" id="visual"><iframe src="https://drive.google.com/file/d/1b4te13DLQeTaiVBbH7TqYskHNUdN2SIe/preview" width="740" height="486"></iframe></li>
+      <li class="content" id="register"><p>This page should allow visitors to sign up to a news-letter</p></li>
       <li class="social">
         <article>
           <section>
