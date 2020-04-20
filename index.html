@@ -111,6 +111,20 @@ html {
   position: relative;
 }
 
+#visual, #audio, #register{
+    display:none;
+}
+#audio:target{
+    display:block;
+}
+#visual:target{
+    display:block;
+}
+#register:target{
+   display:block;
+}
+
+
 a {
   color: black;
   text-decoration: underline;
@@ -183,9 +197,9 @@ nav ul li {
       <li class="slide"></li>
     </ul>
     <ul>
-      <li class="macified"><a name="audio"></a><p>Audio</p><iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1035799948&color=%232b1411&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></li>
-      <li class="macified"><a name="visual"></a><p>Visual</p><iframe src="https://drive.google.com/file/d/1b4te13DLQeTaiVBbH7TqYskHNUdN2SIe/preview" width="740" height="486"></iframe></li>
-      <li class="macified"><a name="register"></a><p>Register</p><iframe width="100%" height="300" src="https://forms.gle/48LhTwjcqgvEk2FE6"></iframe></li>
+      <li class="macified"><a name="audio"><p>Audio</p><iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1035799948&color=%232b1411&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></a></li>
+      <li class="macified"><a name="visual"><p>Visual</p><iframe src="https://drive.google.com/file/d/1b4te13DLQeTaiVBbH7TqYskHNUdN2SIe/preview" width="740" height="486"></iframe></a></li>
+      <li class="macified"><a name="register"><p>Register</p><iframe width="100%" height="300" src="https://forms.gle/48LhTwjcqgvEk2FE6"></iframe></a></li>
       <li class="macified"><p>Social</p>
         <article class="macified">
           <section>
