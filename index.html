@@ -49,8 +49,8 @@ just for appearance; change whatever you want
 */
 
 .slide {
-    font-size: 40px;
-    padding: 40px;
+    width: 100%;
+    height: 100%;
     box-sizing: border-box;
     background: #333;
     color: #fff;
@@ -162,11 +162,14 @@ nav ul li {
     function startSlide() {
       var slides = document.querySelectorAll('#slides .slide');
       var currentSlide = 0;
-      var slideInterval = setInterval(nextSlide, 3000, slides, currentSlide);
-    
+      
+      while (true) {
+        var slideInterval = setInterval(nextSlide, 3000, slides, currentSlide);
+        currentSlide = (currentSlide + 1) % slides.length;
+      }
+      
       function nextSlide(slides, currentSlide) {
         slides[currentSlide].className = 'slide';
-        currentSlide = (currentSlide+1)%slides.length;
         slides[currentSlide].className = 'slide showing';
       }
     }
@@ -178,10 +181,16 @@ nav ul li {
       </section>
     </header>
     <ul id="slides">
-      <li class="slide showing"><p>Audio</p><iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1035799948&color=%232b1411&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></li>
-      <li class="slide"><p>Visual</p><iframe src="https://drive.google.com/file/d/1b4te13DLQeTaiVBbH7TqYskHNUdN2SIe/preview" width="740" height="486"></iframe></li>
-      <li class="slide"><p>Register</p><iframe width="100%" height="300" src="https://forms.gle/48LhTwjcqgvEk2FE6"></iframe></li>
-      <li class="slide"><p>Social</p>
+      <li class="slide showing"></li>
+      <li class="slide"></li>
+      <li class="slide"></li>
+      <li class="slide"></li>
+    </ul>
+    <ul>
+      <li class="macified"><p>Audio</p><iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1035799948&color=%232b1411&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe></li>
+      <li class="macified"><p>Visual</p><iframe src="https://drive.google.com/file/d/1b4te13DLQeTaiVBbH7TqYskHNUdN2SIe/preview" width="740" height="486"></iframe></li>
+      <li class="macified"><p>Register</p><iframe width="100%" height="300" src="https://forms.gle/48LhTwjcqgvEk2FE6"></iframe></li>
+      <li class="macified"><p>Social</p>
         <article class="macified">
           <section>
            <nav>
