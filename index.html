@@ -187,8 +187,10 @@ nav ul li {
   </style>
   <body onload="startSlide();">
     <script type="text/javascript">
-    window.scrollTo(0, 0);
     var currentSlide = 0;
+    function getHigh() {
+      window.scrollTo(0, 0);
+    }
     function startSlide() {
       var slides = document.querySelectorAll('#slides .slide');
       var slideInterval = setInterval(nextSlide, 3000, slides);
@@ -201,7 +203,7 @@ nav ul li {
     }
     </script>
     <header>
-      <section>
+      <section onload="getHigh();">
         <p><h2>We are Sun Citadel Dance Club!</h2></p>
         <p>An underground club sprung out of Stockholm Sweden.</p>
       </section>
