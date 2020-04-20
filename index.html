@@ -187,12 +187,25 @@ nav ul li {
   height: 50px;
 }
 
-.navigation {
+#navbar {
+  overflow: hidden;
+  background-color: #333;
   z-index: 11;
   position: absolute;
   left: 10px;
-  top: 221px;
+  top: 221px; 
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
   
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
 }
 
 .navigation ul {
@@ -227,6 +240,22 @@ nav ul li {
   <body onload="startSlide();">
     <script type="text/javascript">
     var currentSlide = 0;
+    window.onscroll = function() {stickyNavbar()};
+
+    // Get the navbar
+    var navbar = document.getElementById("navbar");
+
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function stickyNavbar() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
     function getHigh() {
       window.scrollTo(0, 0);
     }
@@ -246,7 +275,7 @@ nav ul li {
         <p><h2>We are Sun Citadel Dance Club!</h2></p>
         <p>An underground club sprung out of Stockholm Sweden.</p>
       </section>
-      <section class="navigation">
+      <section class="navigation" id='navbar'>
         <ul>
           <li><a href="#audio">Listen</a></li>
           <li><a href="#visual">See</a></li>
