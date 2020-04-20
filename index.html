@@ -259,6 +259,7 @@ nav ul li {
       window.scrollTo(0, 0);
     }
     function startSlide() {
+      navbarLoader();
       var slides = document.querySelectorAll('#slides .slide');
       var slideInterval = setInterval(nextSlide, 3000, slides);
 
@@ -275,7 +276,7 @@ nav ul li {
         <p>An underground club sprung out of Stockholm Sweden.</p>
       </section>
       <section>
-        <ul class="navigation" id="navbar"><style onload="navbarLoader();"/>
+        <ul class="navigation" id="navbar">
           <li><a href="#audio">Listen</a></li>
           <li><a href="#visual">See</a></li>
           <li><a href="https://forms.gle/48LhTwjcqgvEk2FE6" target="_blank">Register</a></li>
