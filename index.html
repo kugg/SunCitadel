@@ -105,7 +105,6 @@ html {
  background: linear-gradient(135deg, rgba(250,250,250,1) -30%,rgba(255,255,255,0) 100%);
  */
   border: none;
-  margin: 1em;
   list-style-type: none;
   z-index: 10;
   position: relative;
@@ -148,10 +147,6 @@ figure {
   transform: rotate(20deg);
 }
 
-.player {
-  padding-top: 200px;
-}
-
 nav ul {
   padding: 0;
 }
@@ -176,6 +171,8 @@ nav ul li {
 .social ul {
   white-space: nowrap;
   overflow: hidden;
+  padding: 0px;
+  margin: 0px;
 }
 
 .social li {
@@ -193,6 +190,10 @@ nav ul li {
   padding: 0;
   overflow: hidden;
   background-color: #333;
+  z-index: -1;
+  -webkit-box-shadow: 0px 2px 7px -2px rgba(0,0,0,0.53);
+  -moz-box-shadow: 0px 2px 7px -2px rgba(0,0,0,0.53);
+  box-shadow: 0px 2px 7px -2px rgba(0,0,0,0.53);
 }
 
 .navigation li {
