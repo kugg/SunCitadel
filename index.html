@@ -191,24 +191,11 @@ nav ul li {
   overflow: hidden;
   background-color: #333;
   z-index: 11;
-  position: absolute;
+  /*
+  position: float;
   left: 10px;
-  top: 221px; 
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  
-}
-
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
-  padding-top: 60px;
-}
-
-.navigation ul {
+  top: 200px;
+  */
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -217,6 +204,17 @@ nav ul li {
   -webkit-box-shadow: 0px 4px 7px -2px rgba(0,0,0,0.83);
   -moz-box-shadow: 0px 4px 7px -2px rgba(0,0,0,0.83);
   box-shadow: 0px 4px 7px -2px rgba(0,0,0,0.83);
+}
+
+.sticky {
+  position: fixed;
+  top: 50;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
 }
 
 .navigation li {
