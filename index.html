@@ -101,9 +101,6 @@ html {
 }
 
 .content {
-/*
- background: linear-gradient(135deg, rgba(250,250,250,1) -30%,rgba(255,255,255,0) 100%);
- */
   border: none;
   list-style-type: none;
   z-index: 10;
@@ -232,16 +229,11 @@ li {
     <script type="text/javascript">
     var currentSlide = 0;
     function navbarLoader() {
-    // Get the navbar
-    var navbar = document.getElementById("navbar");
-    // Get the offset position of the navbar
-    var sticky = navbar.offsetTop;
-      
-    window.onscroll = function() {stickyNavbar(navbar, sticky)};
-    window.onload = function() {stickyNavbar(navbar, sticky)};
-
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+      window.onscroll = function() {stickyNavbar(navbar, sticky)};
+      window.onload = function() {stickyNavbar(navbar, sticky)};
     }
-    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
     function stickyNavbar(navbar, sticky) {
 
       if (window.pageYOffset >= sticky) {
@@ -292,7 +284,7 @@ li {
         <iframe src="https://drive.google.com/file/d/1b4te13DLQeTaiVBbH7TqYskHNUdN2SIe/preview" width="740" height="486"></iframe>
         <iframe width="560" height="300" src="https://www.youtube.com/embed/p7hPy8r4HX4?start=3947" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </li>
-      <li class="content" id="register"><iframe src="https://docs.google.com/forms/d/1uRgdRIWRZ4Xw6O-UVVVa8OP3IpgUmm8-Ej6XaZ87Zz4/viewform?embedded=true" width="100%" height="800" scrolling="no" frameborder="0" marginheight="0" marginwidth="0"></iframe></li>
+      <li class="content" id="register"><iframe src="https://docs.google.com/forms/d/1uRgdRIWRZ4Xw6O-UVVVa8OP3IpgUmm8-Ej6XaZ87Zz4/viewform?embedded=true" width="100%" height="745" scrolling="no" frameborder="0" marginheight="0" marginwidth="0"></iframe></li>
       <li class="social">
         <article>
           <section>
